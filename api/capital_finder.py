@@ -4,6 +4,10 @@ import requests
  
 class handler(BaseHTTPRequestHandler):
   # result = None 
+  """
+        Handles a GET HTTP request with the 'country' or 'capital' query parameter
+        and responds with a string indicating the capital of a country or the country of a capital.
+  """
   def do_GET(self):
     s = self.path
     url_components = parse.urlsplit(s)
